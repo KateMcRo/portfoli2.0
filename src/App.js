@@ -1,9 +1,12 @@
 import "./App.css";
+import React, { useState } from "react";
+import View from "./components/view/View";
 
 function App() {
+  const [view, setView] = useState("about");
   return (
     <div className="App">
-      <header className="App-header">Hello World</header>
+      <View view={view} setView={setView} />
     </div>
   );
 }

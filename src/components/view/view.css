@@ -1,0 +1,86 @@
+/* View Container */
+.viewContainer {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 15fr 1fr ;
+}
+
+/* Navigation */
+.navContainer {
+    background-color: black;
+    color: white;
+    align-content: center;
+    justify-content: center;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    
+    @media (min-width: 600px) {
+    justify-content: start;
+    align-content: center;
+   }
+}
+
+li {
+    list-style-type: none;
+}
+
+/* View */
+.view {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: ". wrapper .";
+}
+
+.wrapper {
+    grid-area: wrapper;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-areas: 
+    ". ."
+    "img pair"
+    ". .";
+    grid-gap: 20px;
+}
+
+.imgContainer {
+    background-color: orange;
+    grid-area: img;
+}
+
+.pairContainer {
+    grid-area: pair;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: "title"
+    "bio";
+    grid-gap: 20px;
+}
+
+.titleContainer {
+    grid-area: title;
+    background-color: grey
+}
+
+.bioContainer {
+    background-color: purple;
+    grid-area: bio;
+}
+
+/* Footer */
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    background-color: black;
+    justify-content: center;
+    align-content: center;
+}
+
+footer i {
+    margin: 10px;
+    color: white;
+    display: flex;
+  }
