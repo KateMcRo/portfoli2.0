@@ -1,0 +1,36 @@
+.wrapper {
+    grid-area: wrapper;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-areas: 
+    ". ."
+    "img pair"
+    ". .";
+    grid-gap: 20px;
+    /* needs media query for single column on small screens (2 1 2?) */
+}
+
+.imgContainer {
+    background-color: var(--org);
+    grid-area: img;
+}
+
+.pairContainer {
+    grid-area: pair;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: "title"
+    "bio";
+    grid-gap: 20px;
+}
+
+.titleContainer {
+    grid-area: title;
+    background-color: var(--lt)
+}
+
+.bioContainer {
+    background-color: var(--mag);
+    grid-area: bio;
+}

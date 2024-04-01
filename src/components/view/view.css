@@ -7,8 +7,8 @@
 
 /* Navigation */
 .navContainer {
-    background-color: black;
-    color: white;
+    background-color: var(--drk);
+    color: var(--wht);
     align-content: center;
     justify-content: center;
 }
@@ -34,53 +34,17 @@ li {
     grid-template-areas: ". wrapper .";
 }
 
-.wrapper {
-    grid-area: wrapper;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 5fr 1fr;
-    grid-template-areas: 
-    ". ."
-    "img pair"
-    ". .";
-    grid-gap: 20px;
-}
-
-.imgContainer {
-    background-color: orange;
-    grid-area: img;
-}
-
-.pairContainer {
-    grid-area: pair;
-    display: grid;
-    grid-template-rows: 1fr 4fr;
-    grid-template-areas: "title"
-    "bio";
-    grid-gap: 20px;
-}
-
-.titleContainer {
-    grid-area: title;
-    background-color: grey
-}
-
-.bioContainer {
-    background-color: purple;
-    grid-area: bio;
-}
-
 /* Footer */
 footer {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    background-color: black;
+    background-color: var(--drk);
     justify-content: center;
     align-content: center;
 }
 
 footer i {
     margin: 10px;
-    color: white;
+    color: var(--wht);
     display: flex;
   }
