@@ -8,7 +8,7 @@ export default function View({ view, setView }) {
   return (
     <>
       <div className="viewContainer">
-        <nav className="navContainer">
+        <nav>
           <ul>
             <li
               className={`navbar-item ${view === "about" ? "selected" : ""}`}

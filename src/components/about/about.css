@@ -1,36 +1,109 @@
 .wrapper {
     grid-area: wrapper;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-columns: 2fr 3.5fr;
+    grid-template-rows: 0fr 20fr 0fr;
     grid-template-areas: 
     ". ."
     "img pair"
     ". .";
-    grid-gap: 20px;
-    /* needs media query for single column on small screens (2 1 2?) */
+    grid-gap: 1.5rem;
+
+   
 }
 
 .imgContainer {
     background-color: var(--org);
     grid-area: img;
+    display: grid;
+    grid-template-columns: 0fr 7fr 0fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-template-areas:
+    ". greet ."
+    ". selfie ."
+    ". name ."
+    ". job .";
+    grid-gap: 2rem;
+}
+
+.greeting {
+    grid-area: greet;
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    align-self: end;
+}
+
+.selfie {
+    /* width: 15vw; */
+    width: 100%;
+    grid-area: selfie;
+    justify-self: center;
+    align-self: end;
+}
+
+.name {
+    grid-area: name;
+    align-self: center;
+}
+
+.job-title {
+    grid-area: job;
+    justify-self: right;
 }
 
 .pairContainer {
     grid-area: pair;
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: .5fr 3fr;
     grid-template-areas: "title"
     "bio";
-    grid-gap: 20px;
+    grid-gap: 1.5rem;
 }
 
 .titleContainer {
     grid-area: title;
-    background-color: var(--lt)
+    background-color: var(--wht);
+    color: var(--drk);
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
 }
 
 .bioContainer {
     background-color: var(--mag);
     grid-area: bio;
+    padding: 2rem;
+    font-size: 1.25rem;
+}
+
+
+
+ /* Single column on tablets and phones */
+ @media (max-width: 1024px) and (min-height: 601px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0fr 1fr 2fr 0fr;
+        grid-template-areas: 
+        "."
+        "img"
+        "pair"
+        "."
+    }
+
+    .imgContainer {
+        grid-area: img;
+        display: grid;
+        grid-template-columns: 0fr 1.5fr 1fr 0fr;
+        grid-template-rows: 0fr 1fr 2fr 1fr 0fr;
+        grid-template-areas:
+        ". . . ."
+        ". selfie greet ."
+        ". selfie name."
+        ". selfie job .";
+        grid-gap: 2rem;
+    }
+   
+    .selfie {
+        align-self: center;
+    }
 }

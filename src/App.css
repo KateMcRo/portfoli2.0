@@ -1,1 +1,34 @@
 
+li, i {
+  color: var(--wht);
+  font-family: var(--font1);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+li:hover, i:hover {
+  background: linear-gradient(45deg, var(--org), var(--mag));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.roundLR {
+  border-top-left-radius: 2.1875rem;
+  border-bottom-right-radius: 2.1875rem;
+}
+
+.roundRL {
+  border-top-right-radius: 2.1875rem;
+  border-bottom-left-radius: 2.1875rem;
+}
+
+.basic {
+  font-family: var(--font1)
+}
+
+.signature {
+  font-family: var(--font2);
+  font-size: 2.25rem;
+}

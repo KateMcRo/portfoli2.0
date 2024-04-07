@@ -6,7 +6,7 @@
 }
 
 /* Navigation */
-.navContainer {
+nav {
     background-color: var(--drk);
     color: var(--wht);
     align-content: center;
@@ -30,7 +30,7 @@ li {
 /* View */
 .view {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 4fr 1fr;
     grid-template-areas: ". wrapper .";
 }
 
@@ -45,6 +45,5 @@ footer {
 
 footer i {
     margin: 10px;
-    color: var(--wht);
     display: flex;
   }
