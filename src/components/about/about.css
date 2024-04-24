@@ -7,7 +7,7 @@
     ". ."
     "img pair"
     ". .";
-    grid-gap: 1.5rem;
+    column-gap: 1.5rem;
 
    
 }
