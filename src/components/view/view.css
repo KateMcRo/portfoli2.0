@@ -1,17 +1,14 @@
 /* View Container */
 .viewContainer {
-    min-height: 100vh;
+    height: 100vh;
     display: grid;
     grid-template-rows: 1fr auto 1fr ;
 }
 
 /* Navigation */
-/* nav {
-    background-color: var(--drk);
-    color: var(--wht);
+nav {
     align-content: center;
-    justify-content: center;
-} */
+} 
 
 ul {
     display: grid;

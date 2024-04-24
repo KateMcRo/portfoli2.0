@@ -23,7 +23,7 @@
     ". selfie ."
     ". name ."
     ". job .";
-    grid-gap: 2rem;
+    column-gap: 1.5rem;
 }
 
 .greeting {
@@ -55,7 +55,8 @@
     grid-area: pair;
     display: grid;
     grid-template-rows: .5fr 3fr;
-    grid-template-areas: "title"
+    grid-template-areas: 
+    "title"
     "bio";
     grid-gap: 1.5rem;
 }
@@ -72,9 +73,9 @@
 .bioContainer {
     background-color: var(--mag);
     grid-area: bio;
-    padding: 2rem;
-    font-size: 1.25rem;
-}
+    padding: 1.5rem;
+/*     font-size: 1.25rem;
+ */}
 
 
 
@@ -87,7 +88,8 @@
         "."
         "img"
         "pair"
-        "."
+        ".";
+        row-gap: 1.5rem;
     }
 
     .imgContainer {
